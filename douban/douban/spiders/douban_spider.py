@@ -12,6 +12,7 @@ class DoubanMovieTop250Spider(scrapy.Spider):
     def parse(self, response):
         item = DoubanItem()
         movies = response.xpath('//ol[@class="grid_view"]/li')
+
         for movie in movies:
             item['number'] = movie.xpath(".//div[@class='pic']/em/text()").get()
             item['title'] = movie.xpath(".//span[@class='title']/text()").get()

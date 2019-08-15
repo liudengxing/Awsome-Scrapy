@@ -12,11 +12,15 @@ class WeatherPerHourItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
 
-    # time in  the day
-    time = scrapy.Field()
+    city = scrapy.Field()
+    date = scrapy.Field()
 
-    # what's the weather this day
+    # what's the weather today
     weather = scrapy.Field()
 
     # what's the temperature
-    temperature = scrapy.Field()
+    temperature_high = scrapy.Field()
+    temperature_low = scrapy.Field()
+
+    # wind
+    wind = scrapy.Field()
