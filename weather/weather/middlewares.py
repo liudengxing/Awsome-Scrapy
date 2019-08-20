@@ -6,7 +6,8 @@
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+# import random
+# from weather.settings import IPPOOL
 
 class WeatherSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -101,3 +102,17 @@ class WeatherDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+
+# class MyproxiesSpiderMiddleware(object):
+#     def __init__(self, ip):
+#         self.ip = ip
+#
+#     @classmethod
+#     def from_crawler(cls, crawler):
+#         return cls(ip = crawler.settings.get('PROXIES'))
+#
+#     def process_request(self, request, spider):
+#         ip = random.choice(IPPOOL) # random choice ip from ippool
+#         print("this is ip: " + ip) # print ip
+#         request.meta["proxy"] = "http://" + ip
