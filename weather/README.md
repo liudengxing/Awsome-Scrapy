@@ -8,3 +8,10 @@ weather_scrapy v0.1.1
 v0.1.0
 
 - 实现 爬取单城市天气
+
+
+
+feature
+
+- 全国天气自动爬取
+
