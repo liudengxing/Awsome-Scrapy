@@ -13,6 +13,10 @@ class DoubanMovieTop250Spider(scrapy.Spider):
         item = DoubanItem()
         movies = response.xpath('//ol[@class="grid_view"]/li')
 
+        # output response.html
+        target = open("response.html", 'wb+')
+        target.write(response.body)
+
         for movie in movies:
             item['number'] = movie.xpath(".//div[@class='pic']/em/text()").get()
             item['title'] = movie.xpath(".//span[@class='title']/text()").get()
