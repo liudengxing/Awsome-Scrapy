@@ -12,11 +12,49 @@ class WeatherSpider(scrapy.Spider):
     }
 
     def start_requests(self):
-        url = "http://www.weather.com.cn/textFC/beijing.shtml"
-        yield scrapy.Request(url)
+        start_urls = ["/textFC/beijing.shtml",\
+        "/textFC/anhui.shtml",\
+        "/textFC/anhui.shtml",\
+        "/textFC/chongqing.shtml",\
+        "/textFC/gansu.shtml",\
+        "/textFC/fujian.shtml",\
+        "/textFC/guangdong.shtml",\
+        "/textFC/guizhou.shtml",\
+        "/textFC/guangxi.shtml",\
+        "/textFC/hainan.shtml",\
+        "/textFC/hebei.shtml",\
+        "/textFC/henan.shtml",\
+        "/textFC/hubei.shtml",\
+        "/textFC/hunan.shtml",\
+        "/textFC/heilongjiang.shtml",\
+        "/textFC/jilin.shtml",\
+        "/textFC/jiangsu.shtml",\
+        "/textFC/jiangxi.shtml",\
+        "/textFC/liaoning.shtml",\
+        "/textFC/neimenggu.shtml",\
+        "/textFC/ningxia.shtml",\
+        "/textFC/qinghai.shtml",\
+        "/textFC/shandong.shtml",\
+        "/textFC/shan-xi.shtml",\
+        "/textFC/shanxi.shtml",\
+        "/textFC/shanghai.shtml",\
+        "/textFC/sichuan.shtml",\
+        "/textFC/tianjin.shtml",\
+        "/textFC/xizang.shtml",\
+        "/textFC/xinjiang.shtml",\
+        "/textFC/yunnan.shtml",\
+        "/textFC/zhejiang.shtml",\
+        "/textFC/hongkong.shtml",\
+        "/textFC/macao.shtml",\
+        "/textFC/taiwan.shtml"]
+        
+        for url in start_urls:
+            yield scrapy.Request("http://www.weather.com.cn" + url)
 
 
     def parse(self, response):
+
+        global FLAG
 
         # print(response.body)
         item = WeatherItem()
