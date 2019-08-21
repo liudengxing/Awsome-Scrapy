@@ -1,7 +1,7 @@
 # 爬取全国天气  
 
 
-![python](https://img.shields.io/badge/language-python-green.svg?style=flat-square)![正常大小的矩形](https://img.shields.io/badge/IDE-atom-red.svg?style=flat-square)
+![python](https://img.shields.io/badge/language-python-green.svg?style=flat-square)  ![正常大小的矩形](https://img.shields.io/badge/IDE-atom-red.svg?style=flat-square)
 
 
 
