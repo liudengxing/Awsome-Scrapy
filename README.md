@@ -14,3 +14,5 @@ Awsome-Scrapy 是由 Scrapy 爬虫实现为核心的 Scrapy 教程 ，帮助你�
 
 
 
+emmmm ,该项目因为不可抗力（指公司规划）现已放弃维护
+
